@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/bb">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="414dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_judul"
+                android:text="Register"
+                android:textColor="@color/colorWhite"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.472"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.078" />
+
+            <EditText
+                android:id="@+id/inputUsername"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/input_bg"
+                android:drawableLeft="@drawable/ic_person"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:fontFamily="@font/font_tulisan"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:paddingLeft="20dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/logo"
+                app:layout_constraintVertical_bias="0.044" />
+
+            <EditText
+                android:id="@+id/inputEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/input_bg"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:fontFamily="@font/font_tulisan"
+                android:hint="Email"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:paddingLeft="20dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="@+id/inputUsername"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="@+id/inputUsername"
+                app:layout_constraintTop_toBottomOf="@+id/inputUsername" />
+
+            <EditText
+                android:id="@+id/inputNama"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/input_bg"
+                android:drawableLeft="@drawable/ic_person"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:fontFamily="@font/font_tulisan"
+                android:hint="Nama"
+                android:minHeight="48dp"
+                android:paddingLeft="20dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="@+id/inputEmail"
+                app:layout_constraintStart_toStartOf="@+id/inputEmail"
+                app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+
+            <TextView
+                android:id="@+id/txtAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/font_tulisan"
+                android:text="Age"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/inputNama"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/inputNama"
+                app:layout_constraintTop_toBottomOf="@+id/inputNama" />
+
+            <TextView
+                android:id="@+id/txtAngka"
+                android:layout_width="110dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/font_tulisan"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.634"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAge" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:max="100"
+                android:min="0"
+                android:progress="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAngka" />
+
+            <TextView
+                android:id="@+id/txt_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/font_tulisan"
+                android:text="Gender"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/seekBar"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/seekBar"
+                app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+            <RadioGroup
+                android:id="@+id/radioGrup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/txt_gender"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/txt_gender"
+                app:layout_constraintTop_toBottomOf="@+id/txt_gender"
+
+                >
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_tulisan"
+                    android:text="Male"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18dp"
+                    app:layout_constraintEnd_toEndOf="@+id/radioGrup"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/radioGrup"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGrup" />
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_tulisan"
+                    android:text="Female"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18dp"
+                    app:layout_constraintEnd_toEndOf="@+id/radioMale"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/radioMale"
+                    app:layout_constraintTop_toBottomOf="@+id/radioMale" />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/txt_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="110dp"
+                android:fontFamily="@font/font_tulisan"
+                android:text="Choose 1 idol group:"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/txt_gender"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/txt_gender"
+                app:layout_constraintTop_toBottomOf="@+id/txt_gender" />
+
+            <CheckBox
+                android:id="@+id/cb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/font_tulisan"
+                android:padding="10dp"
+                android:text="BTS"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/txt_checkbox"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/txt_checkbox"
+                app:layout_constraintTop_toBottomOf="@+id/txt_checkbox" />
+
+            <CheckBox
+                android:id="@+id/cb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/font_tulisan"
+                android:padding="10dp"
+                android:text="Red Velvet"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/cb1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/cb1"
+                app:layout_constraintTop_toBottomOf="@+id/cb1" />
+
+            <CheckBox
+                android:id="@+id/cb3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/font_tulisan"
+                android:padding="10dp"
+                android:text="NCT"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/cb2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/cb2"
+                app:layout_constraintTop_toBottomOf="@+id/cb2" />
+
+            <CheckBox
+                android:id="@+id/cb4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/font_tulisan"
+                android:padding="10dp"
+                android:text="BlackPink"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/cb3"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/cb3"
+                app:layout_constraintTop_toBottomOf="@+id/cb3" />
+
+            <CheckBox
+                android:id="@+id/cb5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/font_tulisan"
+                android:padding="10dp"
+                android:text="EXO"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/cb4"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/cb4"
+                app:layout_constraintTop_toBottomOf="@+id/cb4" />
+
+            <CheckBox
+                android:id="@+id/cb6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/font_tulisan"
+                android:padding="10dp"
+                android:text="Twice"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/cb5"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/cb5"
+                app:layout_constraintTop_toBottomOf="@+id/cb5" />
+
+            <CheckBox
+                android:id="@+id/cb7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/font_tulisan"
+                android:padding="10dp"
+                android:text="aespa"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/cb6"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/cb6"
+                app:layout_constraintTop_toBottomOf="@+id/cb6" />
+
+            <CheckBox
+                android:id="@+id/cb8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/font_tulisan"
+                android:padding="10dp"
+                android:text="Stray Kids"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/cb7"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/cb7"
+                app:layout_constraintTop_toBottomOf="@+id/cb7" />
+
+            <CheckBox
+                android:id="@+id/cb9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/font_tulisan"
+                android:padding="10dp"
+                android:text="Weeekly"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/cb8"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/cb8"
+                app:layout_constraintTop_toBottomOf="@+id/cb8" />
+
+            <CheckBox
+                android:id="@+id/cb10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/font_tulisan"
+                android:padding="10dp"
+                android:text="Victon"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/cb9"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/cb9"
+                app:layout_constraintTop_toBottomOf="@+id/cb9" />
+
+            <CheckBox
+                android:id="@+id/cb11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/font_tulisan"
+                android:padding="10dp"
+                android:text="Others"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/cb10"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/cb10"
+                app:layout_constraintTop_toBottomOf="@+id/cb10" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="900dp"
+                android:background="@drawable/btn_bg"
+                android:fontFamily="@font/font_tulisan"
+                android:text="Register"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/inputNama"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/inputNama"
+                app:layout_constraintTop_toBottomOf="@+id/inputNama" />
+
+            <TextView
+                android:id="@+id/alreadyHaveAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/font_tulisan"
+                android:text="Already Have an Account?"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="@+id/btnRegister"
+                app:layout_constraintStart_toStartOf="@+id/btnRegister"
+                app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
